@@ -1,15 +1,22 @@
-# 🚀 BetterSignal - Privacy-First Messaging App
+# BetterSignal
 
-**A next-generation secure messenger aiming to be better than Signal.**
+**Frontend**: Vite + React + TS + Tauri
+**Backend**: NestJS (WebSocket ready)
 
-## Vision
-- Stronger privacy & security
-- Superior UX and features
-- Open source & self-hostable
-- Multi-device sync done right
+## Running Backend
+```bash
+cd backend
+npm install
+npm run dev
+```
 
-## Quick Start
-1. Clone the repo
-2. Follow setup in `docs/` (coming soon)
+## Features Roadmap (Telegram-like)
+- ✅ Real-time chat
+- 🔄 Groups & Channels
+- 🔐 E2EE
+- 📢 Broadcasts
+- 🤖 Bots
+- 💰 Payments
+- 📁 File sharing
 
-Built with ❤️ for freedom.
+More coming soon!
