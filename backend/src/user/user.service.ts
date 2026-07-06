@@ -1,8 +1,19 @@
 import { Injectable } from '@nestjs/common';
+import { PrismaService } from '../prisma/prisma.service';
 
 @Injectable()
 export class UserService {
-  // TODO: Add Prisma or TypeORM later
-  findAll() { return ['user1', 'user2']; }
-  findOne(id: string) { return { id, name: 'User' }; }
+  constructor(private prisma: PrismaService) {}
+
+  async findAll() {
+    return this.prisma.user.findMany();
+  }
+
+  async findOne(id: string) {
+    return this.prisma.user.findUnique({ where: { id } });
+  }
+
+  async create(data: { username: string; email: string }) {
+    return this.prisma.user.create({ data });
+  }
 }
